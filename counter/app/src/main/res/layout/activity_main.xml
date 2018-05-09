@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffd54f"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/buttonC"
+        android:layout_width="241dp"
+        android:layout_height="72dp"
+        android:background="#c8a415"
+        android:text="Count"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="438dp" />
+
+    <TextView
+        android:id="@+id/countText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="120sp"
+        tools:layout_editor_absoluteX="172dp"
+        tools:layout_editor_absoluteY="150dp" />
+
+
+
+</android.support.constraint.ConstraintLayout>

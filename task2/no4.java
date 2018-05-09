@@ -13,9 +13,9 @@ public class no4 {
 		
 		for(int i = 10; i < rec.length; i--){
 				if(ave < rec[i])
-					System.out.println("Largest Number is : " +rec[i]+);	
+					System.out.println("Largest Number is : " +rec[i]);	
 				else if(ave > rec[i])
-					System.out.println("Smallest Number is : " +rec[i]+);		
+					System.out.println("Smallest Number is : " +rec[i]);		
 		}
 	}    
 }
