@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         String claTex = edTextClass.getText().toString();
         String commment = edTextComment.getText().toString();
 
-        Toast.makeText(MainActivity.this,"Berhasil Terkirim", Toast.LENGTH_LONG).show();
+        Toast.makeText(MainActivity.this,"Wajib Mengisi Semua", Toast.LENGTH_LONG).show();
 
     }
 }
