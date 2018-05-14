@@ -1,0 +1,9 @@
+<resources>
+    <string-array name="feedbackTypeList">
+        <item>@string/feedbackType1</item>
+        <item>@string/feedbackType2</item>
+        <item>@string/feedbackType3</item>
+        <item>@string/feedbackType4</item>
+    </string-array>
+
+</resources>

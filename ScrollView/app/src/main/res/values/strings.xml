@@ -1,0 +1,14 @@
+
+<resources>
+    <string name="app_name">ScrollView</string>
+    <string name="name">Your Name</string>
+    <string name="email">Your Email</string>
+    <string name="feedbackType"></string>
+    <string name="feedbackType1">Parse</string>
+    <string name="feedbackType2">Gripe</string>
+    <string name="feedbackType3">Suggestion</string>
+    <string name="feedbackType4">Bug</string>
+    <string name="feedbackField">Feedback Detail</string>
+    <string name="feedbackRes">Would you like an email response?</string>
+    <string name="feedbackBut">Send Feedback</string>
+</resources>

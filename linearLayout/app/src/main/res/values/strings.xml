@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">linearLayout</string>
+    <string name="name">Name</string>
+    <string name="clas">Class</string>
+    <string name="comment">Comment</string>
+    <string name="button">Kirim</string>
+</resources>
