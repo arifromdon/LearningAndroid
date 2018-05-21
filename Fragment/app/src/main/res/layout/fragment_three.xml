@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#ffca28">
+    android:background="#7986cb">
 
     <Button
         android:id="@+id/button1"
@@ -11,17 +11,17 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:text="Menuju ke fragment ke tiga"
+        android:text="Menuju ke fragment ke empat"
         android:textAppearance="@style/TextAppearance.Compat.Notification.Line2"
-        android:background="#4db6ac"/>
+        android:background="#ffee58"/>
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_height="142dp"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="223dp"
+        android:layout_marginBottom="170dp"
         android:text="Belajar yang rajin"
         android:textSize="24sp" />
 </RelativeLayout>

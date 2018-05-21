@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -14,10 +13,10 @@ import android.widget.Button;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FragmentTwo extends Fragment {
+public class FragmentOne extends Fragment {
     private Button buttonSatu;
 
-    public FragmentTwo() {
+    public FragmentOne() {
         // Required empty public constructor
     }
 
@@ -26,14 +25,14 @@ public class FragmentTwo extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_two, container, false);
+        View view = inflater.inflate(R.layout.fragment_one, container, false);
 
-        ((MainActivity)getActivity()).getSupportActionBar().setTitle("Fragment Two");
-        ((MainActivity)getActivity()).getSupportActionBar().setSubtitle("(fragment_two.xml)");
-        ((MainActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        ((MainActivity)getActivity()).getSupportActionBar().setTitle("Fragment Pertama");
+        ((MainActivity)getActivity()).getSupportActionBar().setSubtitle("(fragment_one.xml)");
+        ((MainActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+
 
         buttonSatu = (Button) view.findViewById(R.id.button1);
-        setHasOptionsMenu(true);
         return view;
     }
 
@@ -43,21 +42,14 @@ public class FragmentTwo extends Fragment {
 
         buttonSatu.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                FragmentThree fragmentThree = new FragmentThree();
+            public void onClick(View v) {
+                FragmentTwo fragmentTwo = new FragmentTwo();
 
-                getFragmentManager().beginTransaction().replace(R.id.frame_content, fragmentThree).addToBackStack(null)
+                getFragmentManager().beginTransaction().replace(R.id.frame_content, fragmentTwo).addToBackStack(null)
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).commit();
             }
         });
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item){
-        if(item.getItemId() == android.R.id.home){
-            getFragmentManager().popBackStack();
-        }
-        return super.onOptionsItemSelected(item);
     }
 
 }
