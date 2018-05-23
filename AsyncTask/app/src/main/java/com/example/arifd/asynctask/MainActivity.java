@@ -9,12 +9,29 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     ListView name_list;
     private String[] users = {
+            "name", "address", "age", "city", "state",
+            "name", "address", "age", "city", "state",
+            "name", "address", "age", "city", "state",
+            "name", "address", "age", "city", "state",
+            "name", "address", "age", "city", "state",
+            "name", "address", "age", "city", "state",
+            "name", "address", "age", "city", "state",
+            "name", "address", "age", "city", "state",
+            "name", "address", "age", "city", "state",
+            "name", "address", "age", "city", "state",
+            "name", "address", "age", "city", "state",
+            "name", "address", "age", "city", "state",
+            "name", "address", "age", "city", "state",
+            "name", "address", "age", "city", "state",
+            "name", "address", "age", "city", "state",
+            "name", "address", "age", "city", "state",
             "name", "address", "age", "city", "state",
             "name", "address", "age", "city", "state",
             "name", "address", "age", "city", "state",
@@ -39,8 +56,9 @@ public class MainActivity extends AppCompatActivity {
 
 //        setup adapter for populate data to listview
         name_list = findViewById(R.id.list_item);
-        name_list.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1
-        , new ArrayList<String>()));
+        name_list.setAdapter(new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1,
+                new ArrayList<String>()));
 
 //        process adapter with Asynctask
         arr_to_list_view = new AddArrayToListView();
@@ -59,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 adapter = (ArrayAdapter<String>) name_list.getAdapter();
 
     //            this for init progress dialog
-                progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+                progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
                 progressDialog.setTitle("On Progress ...");
                 progressDialog.setCancelable(false);
                 progressDialog.setProgress(0);
@@ -71,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         arr_to_list_view.cancel(true);
                         progresBar.setVisibility(View.INVISIBLE);
+                        Toast.makeText(getApplicationContext(),"Proses Berhenti", Toast.LENGTH_SHORT).show();
                         dialog.dismiss();
                     }
                 });
@@ -96,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
             protected void onProgressUpdate(String... values) {
                 adapter.add(values[0]);
                 counter++;
-                Integer current_status = (int) ((counter / (float) users.length) * 100);
+                Integer current_status = (int) ((counter / (float) users.length) * 1000);
                 progresBar.setProgress(current_status);
                 //set progress only working for horizontal loading
                 progressDialog.setProgress(current_status);
@@ -107,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
             @Override protected void onPostExecute(Void result) {
                 //hide top progress bar
                 progresBar.setVisibility(View.INVISIBLE);
+                Toast.makeText(getApplicationContext(),"Upload Berhasil", Toast.LENGTH_SHORT).show();
                 //remove progress dialog
                 progressDialog.dismiss();
             }
